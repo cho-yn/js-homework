@@ -17,7 +17,8 @@ function setBgcolor(index) {
   document.body.style.backgroundImage = `linear-gradient(to bottom, ${color})`;
 }
 function setImage(index) {
-  visualImage.src = `./assets/${data[index].name}.jpeg`;
+  let fileName = data[index].name.toLowerCase();
+  visualImage.src = `./assets/${fileName}.jpeg`;
   visualImage.alt = data[index].alt;
 }
 function setNameText(index) {

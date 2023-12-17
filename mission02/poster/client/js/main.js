@@ -9,19 +9,20 @@
 */
 
 const navigation = getNode(".nav ul");
-const visualImage = getNode(".visual img");
-const nickName = getNode(".nickName");
 
 function setBgcolor(index) {
-  let color = data[index].color;
-  document.body.style.backgroundImage = `linear-gradient(to bottom, ${color})`;
+  const color = data[index].color;
+  const [colorA, colorB = "#000"] = color;
+  document.body.style.backgroundImage = `linear-gradient(to bottom, ${colorA}, ${colorB})`;
 }
 function setImage(index) {
-  let fileName = data[index].name.toLowerCase();
+  const visualImage = getNode(".visual img");
+  const fileName = data[index].name.toLowerCase();
   visualImage.src = `./assets/${fileName}.jpeg`;
   visualImage.alt = data[index].alt;
 }
 function setNameText(index) {
+  const nickName = getNode(".nickName");
   nickName.textContent = data[index].name;
 }
 

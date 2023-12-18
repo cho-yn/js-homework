@@ -86,8 +86,8 @@
         console.log("해당 유저의 정보를 가져오지 못했습니다.");
       }
     } else {
-      console.log("입력부터 똑바로 하고와! ");
-      // alert('dlqfurEhrqkfhgo!')
+      console.log("다시 입력");
+      // alert('다시 입력')
       gsap.to("form", {
         y: 10,
         repeat: 8,
